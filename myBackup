@@ -15,4 +15,8 @@ tar cfz $FILE_NAME $BACKUP_SAVE_PATH
 
 echo "MADE BACKUP : "$FILE_NAME
 
-
+if test -f "$FILE_NAME"; then
+    echo "Backup Successful && Email Sent" | mail -s "Backup Successful" yd0369@github.com
+else
+    echo $DATE "Backup Failed : Error in making backup" >> $BACKUP_SAVE_PATH/backup.log 
+fi
