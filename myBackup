@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# myBackup: BASH Files Backup utility by yd0369
+
+BACKUP_SAVE_PATH=$(pwd)
+
+DATE='date +%d%m%Y'
+
+BACKUP_PREFIX="bash_backup_"
+BACKUP_EXT=".tar"
+
+FILE_NAME=$BACKUP_SAVE_PATH$BACKUP_PREFIX$DATE$BACKUP_EXT
